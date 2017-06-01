@@ -1,0 +1,15 @@
+SED cheatsheet:
+https://haiboyugroup.github.io/pdf/misc/sed.pdf
+
+
+SED examples:
+
+cat The\ Python\ Power\ Coder\ BONUS\ Bundle\ _\ TNW\ Deals.htm |grep "topic-bullet-text" |sed -n '/Course Intro/,/Course Outro/p' | sed 's/\>/" "/p' 
+
+Pring all between p1 and p2:
+cat file | sed -n 'p1/,/p2/p'
+
+replace string "kaka" with "pupu":
+cat file | sed 's/"kaka"/"pupu"/p'
+
+

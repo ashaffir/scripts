@@ -1,0 +1,36 @@
+
+working web directory is at:
+
+cd /opt/bitnami/apache2/htdocs
+
+or the virtual hosts at:
+
+cd /var/www/
+
+or 
+cd /opt/bitnami/apps
+
+Control Bitmami services:
+
+sudo /opt/bitnami/ctlscript.sh stop mysql
+
+sudo /opt/bitnami/ctlscript.sh restart apache
+
+Bitnami services file: 
+vi /opt/bitnami/properties.ini
+
+sudo chown -R $USER:$USER htdocs-actappon/
+
+vim /opt/bitnami/apache2/conf/httpd.conf
+
+setting up VNC: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04
+
+apt resources location: 
+/etc/apt/sources.list
+
+Interface traffic monitor:
+iftop
+
+Fix TAB completion problem VNC and other:
+xfconf-query -c xfce4-keyboard-shortcuts -p /xfwm4/custom/'<'Super'>'Tab -r
+

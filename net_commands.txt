@@ -1,0 +1,4 @@
+Check port listening:
+lsof -n -i4TCP:$PORT | grep LISTEN
+netstat -l
+

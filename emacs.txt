@@ -1,0 +1,41 @@
+Cheatsheet: https://gist.github.com/dherman/3238368
+===================================================
+C-x C-c - quit
+C-x C-s - save buffer
+C-x C-f - open file
+C-x b buffer name - switch to open buffer
+C-g - cancel
+C-x k - close current buffer
+C-h a command name - look up docs for command
+M-x command name - execute command
+C-x u - undo
+C-/ - undo
+
+Navigation
+
+C-a - beginning of line
+C-e - end of line
+C-f - forward character
+C-b - backward character
+C-p - down a line
+C-n - up a line
+M-f - forward word
+M-b - backward word
+S-any of the above - navigate and select
+C-space - start selection
+
+Edit:
+
+C-w - cut
+C-y - paste
+
+C-s - search
+M-% - search and replace
+C-d - delete character ahead
+M-d - delete word ahead
+backspace - delete character behind
+M-backspace - delete word behind
+C-k - cut from cursor to end of line
+
+C-o - insert newline after cursor
+
