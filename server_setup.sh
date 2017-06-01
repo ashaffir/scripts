@@ -15,6 +15,7 @@ sudo service vncserver start
 sudo /opt/lampp/lampp start
 
 #After doanloading the XAMPP from the ubuntu website:
+sudo wget https://www.apachefriends.org/xampp-files/7.1.4/xampp-linux-x64-7.1.4-0-installer.run
 sudo chmod +x xampp-linux-x64-5.6.30-1-installer.run 
 sudo ./xampp-linux-x64-5.6.30-1-installer.run 
 
