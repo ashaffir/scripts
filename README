@@ -1,3 +1,8 @@
+sudo add-apt-repository ppa:upubuntu-com/web
+sudo apt-get update
+sudo apt-get install xampp
+
+sudo /opt/lampp/lampp start
 
 working web directory is at:
 
@@ -33,4 +38,16 @@ iftop
 
 Fix TAB completion problem VNC and other:
 xfconf-query -c xfce4-keyboard-shortcuts -p /xfwm4/custom/'<'Super'>'Tab -r
+
+mySQL server:
+login: /usr/local/mysql/bin/mysql -u root -p
+
+If first time, then when asked for password, press ENTER (on Linux) or enter the password form the MAC install message
+To change/add root passowrd from the mySQL prompt:
+
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourpassword');
+
+The current judoka setup is:
+username: root
+password: 01110
 
