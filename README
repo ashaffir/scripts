@@ -51,3 +51,7 @@ The current judoka setup is:
 username: root
 password: 01110
 
+XAMPP Virtual host setup: https://goo.gl/Nr5vce
+sudo vi /opt/lampp/etc/httpd.conf
+sudo vi /opt/lampp/etc/extra/httpd-vhosts.conf
+sudo vi /etc/hosts
