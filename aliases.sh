@@ -1,5 +1,5 @@
 echo "SETTING ALIASES"
-alias a=alias 
+alias a=alias
 a h='history | cut -c 8-'
 a la='ls -la'
 a ll='ls -l'
@@ -27,4 +27,4 @@ a mig='more ~/git.txt'
 a cv='ssh -L 5901:127.0.0.1:5901 alfreds@104.45.231.235'
 a cj='ssh -L 5901:127.0.0.1:5901 alfreds@13.91.88.219'
 a myip='curl ipinfo.io/ip'
-
+a pv='pip -V'

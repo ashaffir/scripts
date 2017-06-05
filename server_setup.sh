@@ -29,3 +29,9 @@ sudo apt-get install mysql-server
 sudo apt-get install python3-dev
 sudo apt-get install libmysqlclient-dev
 pip3 install git+git://github.com/davispuh/MySQL-for-Python-3
+
+# Virtual environment
+sudo pip install virtualenv
+sudo virtualenv venv
+
+

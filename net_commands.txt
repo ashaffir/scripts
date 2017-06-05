@@ -2,3 +2,8 @@ Check port listening:
 lsof -n -i4TCP:$PORT | grep LISTEN
 netstat -l
 
+sudo ifconfig eth0 up
+sudo dhclient eth0
+
+
+

@@ -49,7 +49,8 @@ SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourpassword');
 
 The current judoka setup is:
 username: root
-password: 01110
+password(judoca and MAC): 01110
+password (actappon): 10001
 
 XAMPP Virtual host setup: https://goo.gl/Nr5vce
 sudo vi /opt/lampp/etc/httpd.conf
