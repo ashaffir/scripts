@@ -22,9 +22,13 @@ sudo ./xampp-linux-x64-5.6.30-1-installer.run
 # If requred DVWA:
 wget http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson1/DVWA-1.0.7.zip
 
-# MySQL setting
+# MySQL setting(install the below because the XAMPP comes with a MariaDB)
 sudo apt-get install mysql-client
 sudo apt-get install mysql-server
+
+echo "################"
+echo "# Open the ports in the Network Security group of Azure, in the Inbound Security Rules"
+echo "###############"
 
 sudo apt-get install python3-dev
 sudo apt-get install libmysqlclient-dev

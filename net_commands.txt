@@ -2,8 +2,21 @@ Check port listening:
 lsof -n -i4TCP:$PORT | grep LISTEN
 netstat -l
 
+#Map network 
+netstat -r
+
+#Activate ethernet port manually
 sudo ifconfig eth0 up
 sudo dhclient eth0
 
+# Show host IP (similar to ifconfig) 
+ip addr show
+
+#Check gateway ip
+#MAC
+netstat -nr |grep default
+
+Linux: 
+ip route|grep default
 
 

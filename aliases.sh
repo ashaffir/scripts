@@ -25,6 +25,6 @@ a mu='m ~/used_commands.txt'
 a n=nano
 a mig='more ~/git.txt'
 a cv='ssh -L 5901:127.0.0.1:5901 alfreds@104.45.231.235'
-a cj='ssh -L 5901:127.0.0.1:5901 alfreds@13.91.88.219'
+a cj='ssh -L 5911:127.0.0.1:5901 alfreds@40.85.185.185'
 a myip='curl ipinfo.io/ip'
 a pv='pip -V'
