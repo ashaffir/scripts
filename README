@@ -56,3 +56,6 @@ XAMPP Virtual host setup: https://goo.gl/Nr5vce
 sudo vi /opt/lampp/etc/httpd.conf
 sudo vi /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo vi /etc/hosts
+
+Wordpress:
+sudo wget https://wordpress.org/latest.zip
