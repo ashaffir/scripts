@@ -56,6 +56,8 @@ pip3 install git+git://github.com/davispuh/MySQL-for-Python-3
 # Virtual environment
 sudo pip install virtualenv
 sudo virtualenv venv
+#Debug and start apache server
+sudo /opt/lampp/bin/apachectl start
 
 # Enable locate command
 sudo updatedb && locate -e bench-repo
