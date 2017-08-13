@@ -33,7 +33,8 @@ sudo ./xampp-linux-x64-5.6.30-1-installer.run
 # OR
 sudo apt-get install apache2
 sudo apt-get install php5
-sudo apt-get mysql-server
+sudo apt-get install  php5-mysqlnd-ms
+sudo apt-get mysql-server-5.5
 sudo apt-get php5-mysql
 sudo /etc/init.d/apache2 restart
 
