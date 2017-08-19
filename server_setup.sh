@@ -34,8 +34,14 @@ sudo ./xampp-linux-x64-5.6.30-1-installer.run
 sudo apt-get install apache2
 sudo apt-get install php5
 sudo apt-get install  php5-mysqlnd-ms
-sudo apt-get mysql-server-5.5
-sudo apt-get php5-mysql
+sudo apt-get install mysql-server-5.5
+sudo apt-get install php5-mysql
+sudo apt-get install phpmyadmin
+# Edit Apache conf file
+sudo vi /etc/apache2/apache2.conf
+# ADD at the bottom: 
+# Include /etc/phpmyadmin/apache.conf
+ 
 sudo /etc/init.d/apache2 restart
 
 # If requred DVWA:
