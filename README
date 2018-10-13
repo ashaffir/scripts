@@ -31,6 +31,7 @@ vim /opt/bitnami/apache2/conf/httpd.conf
 setting up VNC: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04
 apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 # Change the xstartup file in the .vnc according to the one in scripts
+vncserver -geometry 1280x900 -depth 24
 
 apt resources location: 
 /etc/apt/sources.list
