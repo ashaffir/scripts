@@ -19,4 +19,9 @@ netstat -nr |grep default
 Linux: 
 ip route|grep default
 
+allow the traffic using iptables:
+iptables -I INPUT -p tcp --dport 5000 -j ACCEPT
+
+make sure that your HTTP server is listening on  192.168.50.101:5000 or everywhere (0.0.0.0:5000) by checking the output of:
+netstat -tupln | grep ':5000'
 
