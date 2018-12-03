@@ -1,6 +1,25 @@
 To setup a free SSL:
 --------------------
 
+curl --silent https://raw.githubusercontent.com/srvrco/getssl/master/getssl > getssl ; chmod 700 getssl
+curl --silent https://raw.githubusercontent.com/srvrco/getssl/master/getssl > getssl ; chmod 700 getssl
+sed -i 's/curl -k/curl -Aagent -k/' ./getssl
+domain=shoplikecrazy.online; ./getssl -c $domain
+configFile=.getssl/$domain/getssl.cfg; sed -i 's/SANS/#SANS/' $configFile
+echo 'CA="https://acme-v01.api.letsencrypt.org"' >> $configFile
+echo "ACL=('/your/document/root/goes/here/.well-known/acme-challenge')" >> $configFile
+./getssl $domain
+echo "ACL=('/var/www/shoplikecrazy.online/.well-known/acme-challenge')" >> $configFile
+./getssl $domain
+sudo cd /usr/local/sbin
+sudo wget https://dl.eff.org/certbot-auto
+sudo chmod a+x /usr/local/sbin/certbot-auto
+sudo apt-get install python-letsencrypt-apache
+sudo apt-get update
+sudo apt-get install python3-certbot-apache
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-apache
 sudo certbot --apache -d naboo.id -d www.naboo.id
 
 check the demain:
