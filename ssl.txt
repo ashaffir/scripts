@@ -1,0 +1,4 @@
+To setup a free SSL:
+--------------------
+
+sudo certbot --apache -d naboo.id -d www.naboo.id
