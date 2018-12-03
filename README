@@ -29,6 +29,9 @@ sudo chown -R $USER:$USER htdocs-actappon/
 vim /opt/bitnami/apache2/conf/httpd.conf
 
 setting up VNC: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04
+apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+# Change the xstartup file in the .vnc according to the one in scripts
+vncserver -geometry 1280x900 -depth 24
 
 apt resources location: 
 /etc/apt/sources.list
@@ -56,3 +59,6 @@ XAMPP Virtual host setup: https://goo.gl/Nr5vce
 sudo vi /opt/lampp/etc/httpd.conf
 sudo vi /opt/lampp/etc/extra/httpd-vhosts.conf
 sudo vi /etc/hosts
+
+Wordpress:
+sudo wget https://wordpress.org/latest.zip
