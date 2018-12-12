@@ -1,0 +1,34 @@
+    - >> /usr/local/mysql/bin/mysql -u root -p
+    - >> SHOW DATABASES;
+    - >> CREATE DATABASE stamDB;
+    - >> USE stamDB
+    - >> SELECT DATABASE(); # returns the current database used
+    - >> SHOW TABLES;
+    - >> CREATE TABLE programmers (name VARCHAR(20), Language VARCHAR(20), email VARCHAR(50));
+    - >> ALTER TABLE programmers ADD score INT NOT NULL;
+    - >> DESCRIBE programmers;
+    - >> INSERT INTO programmers (name, Language, email) VALUES ('Bob', 'C#', 'b@mail.com');
+    - >> INSERT INTO programmers (name, Language, email) VALUES ('Caty', 'Python', 'c@mail.com');
+    - >> INSERT INTO programmers (name, Language, email) VALUES ('Dylen', 'C++', 'd@mail.com');
+    - >> SELECT * FROM programmers;  # displays the content of the table
+    - >> SELECT * FROM programmers LIMIT 2;
+    - >> SELELCT * FROM programmers where name == 'Bob';
+    - >> SELECT email FROM programmers where name == 'Caty';
+    - >> DELETE from programmers where name == 'Dylen';
+    - >> INSERT INTO programmers (name, Language, email) VALUES ('Dylen', 'C++', 'd@mail.com');
+    - >> UPDATE programmers  SET name == 'Bobby' where name == 'Bob';
+    - >> TRUNCATE programmers;   # Deleting the data in the table
+    - >> DROP TABLE programmers; # Deleting the table 
+    - >> DROP DATABASE IF EXISTS tutorial_database;
+    - >> DROP DATABASE <database> ; # Deleting database
+    - >> SELECT User from mysql.user;
+    - >> CREATE USER alfreds_wp@localhost IDENTIFIED BY '!Q2w3e4r%T';
+    - >> GRANT ALL PRIVILEGES ON wordpress.* TO alfreds_wp@localhost ;
+    - >> FLUSH PRIVILEGES;
+    - >> DROP USER 'alfreds'@'localhost';
+    - Location of the databases: /var/lib/mysql/
+    - >> CREATE TABLE users (id INT(11) AUTO_INCREMENT PRIMARY KEY,  name VARCHAR (100) , email VARCHAR(100), username VARCHAR(30), password VARCHAR(100), register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+
+Database backup dump: 
+    - $> mysqldump -u root -p judostyle_db > judostyle_db_bak.sql
+
