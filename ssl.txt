@@ -1,3 +1,5 @@
+Information about the certificate: https://certbot.eff.org/lets-encrypt/ubuntutrusty-apache
+
 To setup a free SSL:
 --------------------
 
@@ -25,4 +27,10 @@ sudo certbot --apache -d naboo.id -d www.naboo.id
 check the demain:
 
 https://whynopadlock.com/
+
+Check SSL renew:
+
+sudo certbot renew --dry-run
+
+
 
