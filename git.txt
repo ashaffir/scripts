@@ -15,6 +15,9 @@ git clone /path/to/repository
 For a remote server, use:	
 git clone username@host:/path/to/repository
 
+Add a new repository:
+git remote add origin <path to repository> 
+
 Add files
 Add one or more files to staging (index):	
 git add <filename>
