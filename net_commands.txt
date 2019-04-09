@@ -25,3 +25,9 @@ iptables -I INPUT -p tcp --dport 5000 -j ACCEPT
 make sure that your HTTP server is listening on  192.168.50.101:5000 or everywhere (0.0.0.0:5000) by checking the output of:
 netstat -tupln | grep ':5000'
 
+Mapping the ports on a remote host:
+nmap 35.196.251.225
+
+Checking the port on a remote host
+sudo nping --tcp -p 80 35.196.251.225
+
