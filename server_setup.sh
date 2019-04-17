@@ -44,8 +44,12 @@ sudo apt-get install phpmyadmin
 sudo vi /etc/apache2/apache2.conf
 # ADD at the bottom: 
 # Include /etc/phpmyadmin/apache.conf
- 
 sudo /etc/init.d/apache2 restart
+ 
+#Firewall commands
+sudo ufw status
+sudo sudo ufw allow 'Apache Full'
+sudo ufw enable
 
 # If requred DVWA:
 wget http://www.computersecuritystudent.com/SECURITY_TOOLS/DVWA/DVWAv107/lesson1/DVWA-1.0.7.zip
