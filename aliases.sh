@@ -33,4 +33,4 @@ a xb='xterm -fa 'Monospace' -fs 10 -bg blue -fg white&'
 a xr='xterm -fa 'Monospace' -fs 10 -bg red -fg white&'
 a xg='xterm -fa 'Monospace' -fs 10 -bg darkgreen -fg white&'
 
-alias tabtitle='~/scripts/settitle $(basename.sh `pwd`)'
+alias tabtitle='~/scripts/settitle.sh $(basename `pwd`)'
