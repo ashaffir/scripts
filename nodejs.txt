@@ -1,0 +1,23 @@
+Reference: https://apple.stackexchange.com/questions/171530/how-do-i-downgrade-node-or-install-a-specific-previous-version-using-homebrew
+Uninstall node:
+brew uninstall --force node
+brew uninstall --force npm
+
+brew unlink node
+
+Install node (latest version):
+brew install node
+
+Checking available versions for installation:
+brew search node
+
+Install lparticular release:
+
+brew install node@10
+brew link node@10 
+
+or
+
+brew link --force --overwrite node@10
+
+

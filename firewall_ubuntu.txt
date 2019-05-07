@@ -1,0 +1,11 @@
+## Check the currenct firewall rules:
+sudo iptables -S
+
+## clear all currently defined firewall rules. This command is useful to remove ip addresses that are no longer in use:
+sudo iptables -F INPUT
+
+## Add your ip address to the list of accepted addresses on port 5901:
+sudo iptables -I INPUT -p tcp -s  your ip --dport 5901 -j ACCEPT
+
+## Reject all other ip addresses:
+sudo iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 5901 -j DROP

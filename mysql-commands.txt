@@ -1,3 +1,11 @@
+## After new installation of mysql run:
+sudo chown -R _mysql:mysql /usr/local/var/mysql
+sudo mysql.server start
+
+## On MAC:
+sudo /usr/local/bin/mysql.server restart
+
+
     - >> /usr/local/mysql/bin/mysql -u root -p
     - >> SHOW DATABASES;
     - >> CREATE DATABASE stamDB;

@@ -1,5 +1,8 @@
 Check port listening:
-lsof -n -i4TCP:$PORT | grep LISTEN
+sudo lsof -i -P -n | grep LISTEN
+sudo lsof -Pn -i4
+sudo netstat -tulpn | grep LISTEN
+sudo nmap -sTU -O IP-address-Here
 netstat -l
 
 #Map network 
@@ -30,4 +33,14 @@ nmap 35.196.251.225
 
 Checking the port on a remote host
 sudo nping --tcp -p 80 35.196.251.225
+
+## Monitor traffic
+tcpdump -i eth0 
+
+apt-get install iptraf
+iptraf
+
+sudo apt-get install iftop
+sudo iftop
+
 
