@@ -26,6 +26,7 @@ a n=nano
 a mig='more ~/git.txt'
 a cv='ssh -L 5918:127.0.0.1:5901 alfreds@104.40.25.223'
 a cj='ssh -L 5915:127.0.0.1:5901 alfreds@40.85.185.185'
+a aws1='ssh -i ~/Documents/IT/AWS/actappon_key.pem ubuntu@ec2-3-19-68-159.us-east-2.compute.amazonaws.com'
 a myip='curl ipinfo.io/ip'
 a pv='pip -V'
 a xx='xterm -fa 'Monospace' -fs 10 -bg black -fg white&'
