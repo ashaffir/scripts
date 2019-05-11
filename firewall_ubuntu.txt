@@ -1,11 +1,36 @@
-## Check the currenct firewall rules:
-sudo iptables -S
+## Reference: https://poweruphosting.com/blog/firewall-ufw-ubuntu/
 
-## clear all currently defined firewall rules. This command is useful to remove ip addresses that are no longer in use:
-sudo iptables -F INPUT
+sudo apt-get install ufw
 
-## Add your ip address to the list of accepted addresses on port 5901:
-sudo iptables -I INPUT -p tcp -s  your ip --dport 5901 -j ACCEPT
+!!!!!!!!!!!!!!!!!!!!!!!
+Don't enable the firewall until you enable the port for SSH connections
+!!!!!!!!!!!!!!!!!!!!!!!
 
-## Reject all other ip addresses:
-sudo iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 5901 -j DROP
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+sudo ufw allow ssh
+
+sudo ufw status verbose
+sudo ufw status numbered
+sudo ufw delete 2
+sudo ufw delete allow http
+sudo ufw disable
+sudo ufw reset
+
+sudo ufw enable
+
+sudo ufw allow http
+sudo ufw allow https
+
+## Optional
+sudo ufw allow from 192.168.25.11
+sudo ufw allow from 192.168.25.11 to any port 22
+
+sudo ufw allow ftp
+sudo ufw allow 6000:6007/tcp
+
+sudo ufw deny HTTP
+sudo ufw deny from 192.168.0.1
+
+
