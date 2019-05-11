@@ -1,0 +1,2 @@
+## Listen on a TCP port traffic. Source https://superuser.com/questions/604998/monitor-tcp-traffic-on-specific-port
+sudo tcpdump -i any port 443
