@@ -1,0 +1,6 @@
+
+# killing a list of processes:
+for proc in $(ps |grep chromedrive |awk '{print $1}'); do kill -9 $proc; done
+
+
+

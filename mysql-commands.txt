@@ -4,6 +4,7 @@ sudo mysql.server start
 
 ## On MAC:
 sudo /usr/local/bin/mysql.server restart
+sudo mysql.server start
 
 
     - >> /usr/local/mysql/bin/mysql -u root -p
