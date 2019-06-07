@@ -1,0 +1,5 @@
+# Running scripts in the background, without VNC = nohup.
+# reference: https://janakiev.com/til/python-background/
+# e.g.
+nohup /<PATH TO SCRIPT>/script.py &
+
