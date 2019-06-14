@@ -41,3 +41,6 @@ sudo mysql.server start
 Database backup dump: 
     - $> mysqldump -u root -p judostyle_db > judostyle_db_bak.sql
 
+Where there is an issue with DataBase connction:
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+

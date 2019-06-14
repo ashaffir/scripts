@@ -76,3 +76,6 @@ sudo /opt/lampp/bin/apachectl start
 # Enable locate command
 sudo updatedb && locate -e bench-repo
 
+# Setting up the FTP for SSH key
+# Reference: https://www.digitalocean.com/community/questions/trying-to-login-to-filezilla-ftp-disconnected-no-supported-authentication-methods
+

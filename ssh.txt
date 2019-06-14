@@ -1,0 +1,23 @@
+Creating SSH keays on MAC:
+
+ssh-keygen -t rsa
+
+Copy the public key:
+
+pbcopy < ~/.ssh/id_rsa.pub
+
+To be able to use SSH key for FTP on Ubuntu:
+1) Edit the /etc/ssh/sshd_config file: change PasswordAuthentication and ChallengeResponseAuthentication to yes.
+2) Create ~/.ssh/authorized_keys
+3) Put the public key into authorized_keys
+
+To log into Ubuntu server without SSH key:
+1) Log as as a root to you Ubuntu server
+	vi /etc/ssh/sshd_config
+
+2) Change to no to disable tunnelled clear text passwords
+	PasswordAuthentication yes
+
+3) Restart SSH:
+	service sshd reload
+
