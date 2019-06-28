@@ -6,6 +6,7 @@ a ll='ls -l'
 a p=pwd
 a lr='ls -lrt'
 a m=more
+a c=cat
 a l=less
 a mr='more README'
 a cl=clear
@@ -35,3 +36,5 @@ a xr='xterm -fa 'Monospace' -fs 10 -bg red -fg white&'
 a xg='xterm -fa 'Monospace' -fs 10 -bg darkgreen -fg white&'
 
 alias tabtitle='~/scripts/settitle.sh $(basename `pwd`)'
+a g1='ssh -i ~/Documents/aws_rsa ubuntu@34.73.209.6'
+a vnc_con='ssh -i ~/Documents/aws_rsa -L 5901:127.0.0.1:5901 -N -f -l alfred_shaffir_googlemail_com 34.73.209.6'

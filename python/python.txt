@@ -1,0 +1,17 @@
+MAC
+====
+
+Install PyEnv:
+brew install pyenv
+
+Install the required python version:
+pyenv install 3.6.7
+
+Setup VirtualEnv for the particular Python:
+virtualenv venv_assaf --python=~/.pyenv/versions/3.6.7/bin/python3.6
+
+Install a particular Selenium version:
+pip install selenium==3.11.0
+
+Running iPython from a particular VirtualEnv: Make sure you get the full path:
+/Users/alfredshaffir/Documents/Freelancer/scraping/Asaf/venv_assaf/bin/ipython
