@@ -12,3 +12,5 @@ sudo iptables -A INPUT -p tcp -s 0.0.0.0/0 --dport 5901 -j DROP
 
 ## Open port to all IPs
 iptables -A INPUT -p tcp --dport 4000 -j ACCEPT
+
+## Reference: https://www.digitalocean.com/community/tutorials/how-to-list-and-delete-iptables-firewall-rules

@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/42662104/how-to-install-pip-for-python-3-6-on-ubuntu-16-10/44254088
