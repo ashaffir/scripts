@@ -1,0 +1,8 @@
+# Check where are the memory hogs:
+sudo du -cha --max-depth=1 / | grep -E "M|G"
+
+# Or:
+sudo du -aBM -d 1 . | sort -nr | head -20
+
+# Nice tool to do similar:
+sudo apt install ncdu

@@ -6,4 +6,7 @@ sudo apt-get autoremove -y $ sudo apt-get autoclean
 rm -rf /etc/mysql
 sudo find / -iname 'mysql*' -exec rm -rf {} \;
 
+Creating Cron backups to the database: https://www.linode.com/docs/databases/mysql/use-mysqldump-to-back-up-mysql-or-mariadb/
+
+
 
