@@ -1,0 +1,7 @@
+Setting coockies with requests:
+
+https://www.youtube.com/watch?v=PpaCpudEh2o
+
+Used in Freelancer/Jay project
+
+
