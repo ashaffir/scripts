@@ -2,6 +2,8 @@
 Fix to the loading big files issue:
 https://hostadvice.com/how-to/how-to-edit-php-settings-in-apache-on-an-ubuntu-18-04-vps-or-dedicated-server/
 
+The parameter that changes the loading size is:  post_max_size
+
 #AliDropship plugin issue:
 https://hostadvice.com/how-to/how-to-install-ioncube-loader-on-ubuntu-18-04/
 
