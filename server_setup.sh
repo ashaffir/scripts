@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+hostnamectl set-hostname <SERVER NAME> --> make sure you add the IP and the server name into the /etc/hosts/ file
+
 sudo apt-get install git
 sudo git clone https://github.com/ashaffir/scripts.git
 

@@ -7,3 +7,8 @@ The parameter that changes the loading size is:  post_max_size
 #AliDropship plugin issue:
 https://hostadvice.com/how-to/how-to-install-ioncube-loader-on-ubuntu-18-04/
 
+# There has been an error cropping your image.
+sudo apt-get install php7.2-gd
+sudo systemctl reload apache2
+
+# Theme demo issues: Should import using the internal Wordpress importrer and not the tool with the theme

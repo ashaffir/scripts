@@ -1,0 +1,9 @@
+# Install PHP
+sudo apt install php libapache2-mod-php php-mysql
+
+# Enable PHP mail()
+sudo apt-get install sendmail
+sudo sendmailconfig
+sudo service apache2 restart
+
+Check the PHP with instructions here: https://www.arclab.com/en/kb/php/how-to-test-and-fix-php-mail-function.html
