@@ -7,7 +7,7 @@ Copy the public key:
 pbcopy < ~/.ssh/id_rsa.pub
 
 To push the public key to the new server:
-scp ~/.ssh/google_id_rsa.pub user@server_IP:~/.ssh/authorised_keys
+scp ~/.ssh/google_id_rsa.pub user@server_IP:~/.ssh/authorized_keys
 
 On the server:
 chmod 700 ~/.ssh/

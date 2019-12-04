@@ -1,3 +1,27 @@
+Installation on Ubuntu 18.04
+
+sudo apt install -y apache2 apache2-utils
+sudo apt-get install mysql-server
+sudo apt install mysql-server
+sudo apt install php7.2 libapache2-mod-php7.2 php-mysql
+sudo apt install php7.2 php7.2-cli php7.2-mysql php7.2-json php7.2-opcache php7.2-mbstring php7.2-xml php7.2-gd php7.2-curl
+sudo apt install php libapache2-mod-php
+
+Configure apache2 at /etc/apache2/sites-available/:
+1) Create conf file
+2) Enable the file with: sudo a2ensite <FILE.conf>
+3) sudo systemctl restart apache2
+
+
+Create database in mysql:
+1) mysql
+2) create database DB;
+3) GRANT ALL ON DATABASE_NAME.* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD';
+
+Get wordpress:
+1) wget https://wordpress.org/latest.tar.gz
+2) Edit wp-config.php
+
 
 Fix to the loading big files issue:
 https://hostadvice.com/how-to/how-to-edit-php-settings-in-apache-on-an-ubuntu-18-04-vps-or-dedicated-server/
