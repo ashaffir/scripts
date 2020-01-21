@@ -1,0 +1,83 @@
+##
+
+Make sure you have global paths in the code for all paths!!!
+Dev and Production behave differently. Safe side to have FULL GLOBAL PATH for all commands/operations/...
+
+##
+# Explanation video: 
+1) https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
+2) https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment
+
+# Setting up Django production server on Ubuntu 18.04
+sudo apt update
+sudo apt upgrade -y
+
+sudo hostnamectl set-hostname G5
+
+# Add server IP and server name to the hosts file
+vi /etc/hosts
+
+git clone  https://github.com/ashaffir/scripts.git
+cp scripts/aliases.sh .bash_aliases
+. .bash_aliases
+
+# SSH setup
+mkdir .ssh
+vi .ssh/authorized_keys
+chmod 700 .ssh/
+chmod 600 .ssh/*
+cd libra/
+
+sudo systemctl status apache2
+
+# Python environment
+sudo apt-get install python3-venv
+sudo apt-get install libapache2-mod-wsgi-py3
+sudo apt install python3-pip
+
+# Setup Firewall
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+sudo ufw allow ssh
+sudo ufw allow 8000
+sudo ufw allow OpenSSH
+sudo ufw enable
+sudo ufw status
+
+# Django
+1) settings.py
+1.1) Server IP (allowed IPs)
+1.2) Add root path to the static files
+1.3) Add secret key
+2) pt manage.py collectstatic
+3) run the development server:
+3.1) pt manage.py runserver 0.0.0.0:8000
+3.2) you can now connect with http://<IP>:8000
+
+To connect the domain:
+#######################
+
+# Setup apache conf file
+1) use the default 000 file as base
+2) add the alias to the path for the static files (so that the server would know where to find them when requested in the code
+3) Setup the directory permissions
+4) Add a similar section for the media files if there are any
+5) Give access to the WSGI files in the project
+6) Add the daemon that handles the WSGI 
+7) save and test the file with: sudo apachectl configtest
+8) sudo a2ensite <CONFIG FILE>
+9) sudo a2dissite 000-default.conf
+
+# Giving server access to directories for writing 
+sudo chown :www-data db.sqlite3
+sudo chmod 664 db.sqlite3
+sudo chown :www-data libra/ # Project level i.e. project root
+sudo chown -R :www-data collected_media/
+sudo chmod -R  775 collected_media/
+
+# Create and store sensitive information in a /etc/config.json file (application secret key, email user name, password ...)
+
+# Edit the settings.py again, to add the reading of the config file to handle the SECRET_KEY variable and the email information.
+
+### For Django deployment documentation: https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
+

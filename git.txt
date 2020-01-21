@@ -41,6 +41,9 @@ Connect to a remote repository
 If you haven't connected your local repository to a remote server, add the server to be able to push to it:
 git remote add origin <server>
 
+e.g.
+git remote add origin https://github.com/elyshaffir/PDF-Converter.git
+
 List all currently configured remote repositories:	
 git remote -v
 
@@ -105,3 +108,9 @@ git fetch origin
 git reset --hard origin/master
 Search
 Search the working directory for foo():	git grep "foo()"
+
+# Force overwritelocal changes with what's in the repository
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+

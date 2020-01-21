@@ -1,0 +1,7 @@
+.help;
+.tables;
+select * from <TABLE>;
+delete from auth_user where Username=admin;
+pragma table_info(main_app_event);
+
+.exit

@@ -1,0 +1,9 @@
+Where there are package inport issues:
+1. Go into the workspace folder (here _workspaceRootFolder_) and create a `.env` file
+2. In this empty `.env` file add the line `PYTHONPATH=codeFolder` (replace _codeFolder_ with your folder name)
+3. Add `"python.envFile": "${workspaceFolder}/.env"` to the `settings.json`
+4. Restart VS code
+
+==========================
+
+

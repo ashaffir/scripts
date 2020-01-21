@@ -1,4 +1,60 @@
 # Deployment of the django app:
 https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
 
+# Documentation: https://docs.djangoproject.com/en/2.2/ref/django-admin/
 
+# Tutorial root: https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
+# 
+
+# Install Django
+pip install django
+
+# Make sure to use Django > 2.2.7
+python3 -m django --version
+
+# Django commands
+django-admin
+
+# Start an  project 
+django-admin startproject <PROJECT NAME>
+
+# Create a new app for the project
+python3 manage.py startapp blog
+
+# Add to settings.py the apps configurations, in the INSTALLED_APPS section
+
+# Edit the views.py file to create the routes.
+# Create/edit the urls.py file to create the links to the routes.
+
+# Run the server (open the project in a browser)
+python3 manage.py runserver
+
+# create tempates directory structure to handle the HTML files
+# blog -> templates -> blog -> templates.html
+
+# Prepare DB and admin
+# DB management is done from models.py
+
+# Update DB with the changes made to models
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+# If you want to see what is the SQL command that is executed for the changed in the DB:
+python3 manage.py sqlmigrate blog 0001  
+
+# Create Admin
+python3 manage.py createsuperuser
+
+# Running Django from Shell
+python3 manage.py shell
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+>>> User.objects.first()
+>>> User.objects.filter(username='alfreds')
+>>> Post.objects.all()
+>>> user = User.objects.filter(username='alfreds').first()
+>>> user.id
+>>> post_1 = Post(title='BLog 1',content='This is the content of the 1st blog post', author=user)
+>>> post_1.save()
+>>> Post.objects.all()
