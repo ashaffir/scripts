@@ -1,3 +1,20 @@
+# Reference: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+
+# Installing on ubuntu
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# Accessing DB admin:
+sudo -i -u postgres
+
+# Accessing command line:
+psql
+
+% \?
+
+sudo -u postgres createuser --interactive
+
+# Create the user as the user name in the machine (e.g. ubuntu  on AWS, this way you can access psql directly:
 Postgres command list quick commands guide:
 
 psql		start command line
@@ -12,6 +29,7 @@ psql		start command line
 \dn		describe schemas
 \conninfo	connection information
 \q		quit
+\\password      change database password
 
 # Operations:
 

@@ -4,7 +4,13 @@ Make sure you have global paths in the code for all paths!!!
 Dev and Production behave differently. Safe side to have FULL GLOBAL PATH for all commands/operations/...
 
 ##
-# Explanation video: 
+
+**********
+NGINX + Postgres DB Flow: https://jee-appy.blogspot.com/2017/01/deply-django-with-nginx.html 
+Video: https://www.youtube.com/watch?v=jN9iPaQzZbQ
+*********
+
+# General Explanation video: 
 1) https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=13
 2) https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment
 
@@ -43,6 +49,10 @@ sudo ufw allow 8000
 sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw status
+
+# Setting up the APACHE config file:
+!! If you have error message on the DAEMON, you fucked up the path in that line
+
 
 # Django
 1) settings.py
