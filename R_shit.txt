@@ -1,0 +1,4 @@
+Installing R packages:
+https://clas.uiowa.edu/linux/help/applications/rpackage
+
+

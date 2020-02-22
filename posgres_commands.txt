@@ -8,6 +8,7 @@ sudo apt install postgresql postgresql-contrib
 sudo -i -u postgres
 
 # Accessing command line:
+psql -d <DB NAME>
 psql
 
 % \?

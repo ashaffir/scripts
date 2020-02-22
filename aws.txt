@@ -3,5 +3,9 @@ Adding EBS (new storage) to running EC2 Volume/Instance:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html#ebs-mount-after-reboot
 
 EC2 Volume, Snapshots, Instances operations:
+https://www.youtube.com/watch?v=g1fcADyBhdM
+
+older
 https://www.youtube.com/watch?v=1ZqZsBv1oaw
 
+ 

@@ -1,4 +1,5 @@
 Information about the certificate: https://certbot.eff.org/lets-encrypt/ubuntutrusty-apache
+Updated certificate information: https://letsencrypt.org/docs/client-options/
 
 To setup a free SSL:
 --------------------
