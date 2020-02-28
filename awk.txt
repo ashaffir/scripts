@@ -1,0 +1,67 @@
+Reference: https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/
+
+* Patterns are enclosed in curly braces ({}). Together, a pattern and an action form a rule. The entire awk program is enclosed in single quotes (').
+
+who | awk '{print $1}'
+
+who | awk '{print $1,$4}'
+
+$0: Represents the entire line of text.
+$1: Represents the first field.
+...
+$NF: Stands for “number of fields,” and represents the last field.
+
+date | awk 'OFS="/" {print$2,$3,$6}'
+--> Feb/27/2020
+
+"BEGIN" executes once before the processing begins:
+awk 'BEGIN {print "Dennis Ritchie"} {print $0}' dennis_ritchie.txt  -->  this will write "Dennif..." before the contetnt of the file.
+
+Use diffrent separator than space (in example below its ':')
+awk -F: '{print $1,$6}' /etc/passwd
+
+Add column conditions:
+awk -F: '$3 >= 1000 {print $1,$6}' /etc/passwd
+
+Filter specific pattern:
+awk '/UUID/ {print $0}' /etc/fstab
+
+Filter with condition described with regex(starts with pattern):
+awk '/^UUID/ {print $0}' /etc/fstab
+
+Built-In Functions, e.g. sqrt:
+awk 'BEGIN { print sqrt(625)}'
+
+awk scripts example:
+================================
+#!/usr/bin/awk -f
+
+BEGIN {
+  # set the input and output field separators
+  FS=":"
+  OFS=":"
+  # zero the accounts counter
+  accounts=0
+}
+{
+  # set field 2 to nothing
+  $2=""
+  # print the entire line
+  print $0
+  # count another account
+  accounts++
+}
+END {
+  # print the results
+  print accounts " accounts.\n"
+}
+================================
+
+chmod +x omit.awk
+./omit.awk /etc/passwd
+
+
+
+
+
+
