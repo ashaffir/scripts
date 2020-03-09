@@ -43,3 +43,6 @@ psql -U username -d myDataBase -a -f myInsertFile
 
 Show where it the DB files located:
 show data_directory;
+
+Dump table to CSV file
+\copy table_name to 'filename.csv' csv header

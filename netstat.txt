@@ -1,0 +1,36 @@
+reference: https://www.howtogeek.com/513003/how-to-use-netstat-on-linux/
+
+Listing all sockets:
+netstat -a
+
+Listing by type:
+netstat -at
+
+Listing udp:
+netstat -au
+
+or in unix: 
+netstat -ax
+
+Listing by state:
+netstat -l 
+
+Listing by protocol:
+netstat -st
+
+With process ID:
+netstat -p -at
+
+Numeric address:
+netstat -an
+
+routing table:
+netstat -r
+
+Finding the Port Used by a Process
+netstat -anp | grep "sshd"
+
+List network interfaces:
+netstat -i
+
+
