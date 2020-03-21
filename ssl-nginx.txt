@@ -1,12 +1,17 @@
-## Reference: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+## Reference: https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
 
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install python-certbot-nginx
+sudo apt-get install certbot python-certbot-nginx
+sudo certbot --nginx
+
 sudo ufw status
 sudo ufw allow 'Nginx Full'
 sudo ufw status
 sudo ufw delete allow 'Nginx HTTP'
 sudo ufw status
-sudo certbot --nginx -d swingabit.com -d www.swingabit.com
-sudo certbot renew --dry-run
+
+Not needed anymore
+#sudo certbot --nginx -d swingabit.com -d www.swingabit.com
+#sudo certbot renew --dry-run

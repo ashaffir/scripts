@@ -1,0 +1,29 @@
+Reference:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
+https://serversforhackers.com/c/monitoring-processes-with-supervisord
+
+## Main commands:
+sudo apt-get install -y supervisor
+sudo service supervisor start
+
+## Check supervised programs:
+sudo supervisorctl
+
+supervisorctl reread
+supervisorctl update
+
+
+## Adding programs with configuration fille:
+/etc/supervisor/conf.d/long_script.conf
+
+## Template:
+[program:long_script]
+command=/usr/local/bin/long.sh
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/long.err.log
+stdout_logfile=/var/log/long.out.log
+
+supervisorctl stop long
+supervisorctl start long
+

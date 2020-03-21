@@ -1,12 +1,16 @@
-Tell Git who you are	
-Configure the author name and email address to be used with your commits.
-Note that Git strips some characters (for example trailing periods) from user.name.
+# Global definitions
+git config --global user.name "Alfred Shaffir"
+git config --global user.email ashaffir@gmail.com
 
-git config --global user.name "Sam Smith"
-git config --global user.email sam@example.com
+# Push new repository to Git
 
-Create a new local repository: 	
+##Create a new local repository: 	
+
 git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ashaffir/<REPOSITORY>.git
+git push -u origin master
 
 Check out a repository
 Create a working copy of a local repository:	
@@ -113,4 +117,14 @@ Search the working directory for foo():	git grep "foo()"
 git fetch --all
 git reset --hard origin/master
 git pull origin master
+
+# Restore previsous versions
+## Undo commits, thus leaving the other commits in place (https://www.git-tower.com/learn/git/faq/undo-revert-old-commit)
+
+git revert 0ad5a7a6
+
+## Reset to previsous versions which deletes all commits following that commit (https://www.git-tower.com/learn/git/faq/restore-repo-to-previous-revision)
+git reset --hard 0ad5a7a6 
+
+git reset --soft 0ad5a7a6  --> This will keep the future commits as local modifications
 

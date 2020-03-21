@@ -1,3 +1,5 @@
+Reference: https://www.tomordonez.com/sqlite3-cheatsheet-python.html
+
 .help;
 .tables;
 select * from <TABLE>;

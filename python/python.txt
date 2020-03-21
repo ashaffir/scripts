@@ -15,3 +15,13 @@ pip install selenium==3.11.0
 
 Running iPython from a particular VirtualEnv: Make sure you get the full path:
 /Users/alfredshaffir/Documents/Freelancer/scraping/Asaf/venv_assaf/bin/ipython
+
+Installing Python3.7 from source:
+wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tgz
+tar -xvf Python-3.7.6.tgz
+cd Python-3.7.6
+./configure
+sudo make
+sudo make install
+
+

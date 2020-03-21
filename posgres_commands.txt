@@ -6,6 +6,8 @@ sudo apt install postgresql postgresql-contrib
 
 # Accessing DB admin:
 sudo -i -u postgres
+or 
+sudo su - postgres
 
 # Accessing command line:
 psql -d <DB NAME>
@@ -14,6 +16,9 @@ psql
 % \?
 
 sudo -u postgres createuser --interactive
+
+PG>> createdb --owner db_user django_db
+
 
 # Create the user as the user name in the machine (e.g. ubuntu  on AWS, this way you can access psql directly:
 Postgres command list quick commands guide:
@@ -46,3 +51,15 @@ show data_directory;
 
 Dump table to CSV file
 \copy table_name to 'filename.csv' csv header
+
+Dump backup DB:
+su - <DB USER NAME>
+pg_dump dbname > dbname.bak
+
+Remvove the target DB if exists and create it again:
+dropdb dbname
+createdb dbname
+
+psql dbname < dbname.bak
+
+
