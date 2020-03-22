@@ -1,3 +1,7 @@
+VSCode setup:
+
+Excellent setup: https://www.youtube.com/watch?v=W--_EOzdTHk
+
 Where there are package inport issues:
 1. Go into the workspace folder (here _workspaceRootFolder_) and create a `.env` file
 2. In this empty `.env` file add the line `PYTHONPATH=codeFolder` (replace _codeFolder_ with your folder name)
