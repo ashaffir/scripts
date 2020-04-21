@@ -1,30 +1,74 @@
 Installation on Ubuntu 18.04
 
-sudo apt install -y apache2 apache2-utils
-sudo apt-get install mysql-server
+https://www.hostinger.com/tutorials/how-to-install-wordpress-on-ubuntu-using-lamp-stack/
+
+sudo apt update
+sudo apt install apache2
+
+sudo ufw allow in "Apache Full"
+sudo ufw app info "Apache Full"
+
 sudo apt install mysql-server
-sudo apt install php7.2 libapache2-mod-php7.2 php-mysql
-sudo apt install php7.2 php7.2-cli php7.2-mysql php7.2-json php7.2-opcache php7.2-mbstring php7.2-xml php7.2-gd php7.2-curl
-sudo apt install php libapache2-mod-php
+sudo mysql
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password;
+mysql> FLUSH PRIVILEGES;
+
+mysql -u root -p
+mysql> CREATE DATABASE WordPressDB;
+
+mysql> GRANT ALL ON WordPressDB.* TO ' WordPressUser '@'localhost' IDENTIFIED BY 'NewPasswordToBeSet';
+mysql> FLUSH PRIVILEGES; 
+
+PHP installation:
+
+sudo apt install php libapache2-mod-php php-mysql
+sudo apt install php-curl php-gd php-xml php-mbstring  php-xmlrpc php-zip php-soap php-intl
+
+Enable PHP index:
+sudo vi /etc/apache2/mods-enabled/dir.conf
+<IfModule mod_dir.c>
+   DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+</IfModule>
+
+sudo systemctl restart apache2
 
 Configure apache2 at /etc/apache2/sites-available/:
 1) Create conf file
+1.1) Add
+<Directory /var/www/wordpress />
+   AllowOverride All
+</Directory>
 2) Enable the file with: sudo a2ensite <FILE.conf>
+2.1) Check text: 
+sudo apache2ctl configtest
 3) sudo systemctl restart apache2
 
 
-Create database in mysql:
-1) mysql
-2) create database DB;
-3) GRANT ALL ON DATABASE_NAME.* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD';
-
 Get wordpress:
+0) cd /tmp
 1) wget https://wordpress.org/latest.tar.gz
-2) Edit wp-config.php
+1.1) vi /tmp/wordpress/.htaccess
+2) Edit wp-config.php 
+2.1) DB name, user, password
+2.2) Add SALT security tokens
 
+2.3) Add at the end:
+define('FS_METHOD', 'direct');
 
-Fix to the loading big files issue:
-https://hostadvice.com/how-to/how-to-edit-php-settings-in-apache-on-an-ubuntu-18-04-vps-or-dedicated-server/
+2.4) Add above "stop editing": 
+define( 'DISALLOW_FILE_EDIT', true ); 
+
+3) mkdir /tmp/wordpress/wp-content/upgrade
+
+sudo cp -a /tmp/wordpress/. /var/www/wordpress
+sudo chown -R www-data:www-data /var/www/wordpress
+sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+
+Security measures: https://www.wpbeginner.com/beginners-guide/beginners-step-step-guide-fixing-hacked-wordpress-site/
+Install: Sucuri plugin
+
+Fix to the loading big files issue: https://hostadvice.com/how-to/how-to-edit-php-settings-in-apache-on-an-ubuntu-18-04-vps-or-dedicated-server/
 
 The parameter that changes the loading size is:  post_max_size
 

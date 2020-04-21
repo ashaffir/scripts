@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=Sa_kQheCnds&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6
 # Tutorial root: https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 # 
 
+# Django packages are at: https://djangopackages.org/
+
 # Install Django
 pip install django
 

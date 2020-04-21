@@ -1,0 +1,6 @@
+
+To show all the rows in a print:
+import pandas as pd
+pd.set_option('display.max_rows',df.shape[0]+1)
+
+

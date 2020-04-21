@@ -12,6 +12,12 @@ git commit -m "first commit"
 git remote add origin https://github.com/ashaffir/<REPOSITORY>.git
 git push -u origin master
 
+git config --global credential.helper store
+
+git checkout -b <BRANCH NAME> # This will open a new branch for the code which the "push" is pointer to
+
+git checkout master # Returns the pointer back to the master branch
+
 Check out a repository
 Create a working copy of a local repository:	
 git clone /path/to/repository

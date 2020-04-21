@@ -1,4 +1,4 @@
-## Reference: https://poweruphosting.com/blog/firewall-ufw-ubuntu/
+## Reference:  https://hostadvice.com/how-to/how-to-configure-firewall-with-ufw-on-ubuntu-18/
 
 ## Make  sure to create a network security rule in AWS/Goole/Provider that allows all traffic ports/protocols to the server. That way you control from the UFW locally.
 
@@ -12,7 +12,7 @@ Don't enable the firewall until you enable the port for SSH connections
 #############
 sudo ufw default allow outgoing
 sudo ufw default deny incoming
-sudo ufw default allow ssh
+sudo ufw allow ssh
 
 # Allow a port for testing app (before allowing the HTTP
 sudo ufw allow 8000
