@@ -62,5 +62,15 @@ python3 manage.py shell
 >>> Post.objects.all()
 
 # Restoring a deleted table
+Method 1:
 python manage.py migrate --run-syncdb
 
+Method 2:
+rm -r <app-name>/migrations/
+python manage.py makemigrations <app-name>
+python manage.py sqlmigrate <app-name> 0001_initial
+
+Copy what it prints out (or, depending on what you have actually removed from the DB, only part of the SQL queries). Apply those copied queries to your DB:
+
+psql -U user_name -h 127.0.0.1 database_name
+Paste what you have copied from the SQL queries printout.

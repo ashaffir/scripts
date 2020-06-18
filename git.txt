@@ -18,6 +18,9 @@ git checkout -b <BRANCH NAME> # This will open a new branch for the code which t
 
 git checkout master # Returns the pointer back to the master branch
 
+git branch -d <branch name> # Delete the local branch 
+git branch -D <branch name> # delete both local and remote 
+
 Check out a repository
 Create a working copy of a local repository:	
 git clone /path/to/repository

@@ -2,6 +2,7 @@ echo "SETTING ALIASES"
 alias a=alias
 a h='history | cut -c 8-'
 a la='ls -la'
+a ld='ls -d'
 a ll='ls -l'
 a p=pwd
 a lr='ls -lrt'

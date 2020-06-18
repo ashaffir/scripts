@@ -62,3 +62,6 @@ Adding user to sudu:
 adduser ubuntu sudo
 ubuntu ALL=NOPASSWD: ALL
 
+If there are issues with new user change in /etc/passwd:
+/bin/sh to /bin/bash
+

@@ -33,5 +33,6 @@ Check SSL renew:
 
 sudo certbot renew --dry-run
 
-
+SSL renew:
+sudo certbot renew
 

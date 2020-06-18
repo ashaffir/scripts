@@ -1,0 +1,7 @@
+Django channels allow connection to websockets.
+
+My project I tried to use (not useed thoug): DNDSOS
+
+Tutorial: https://www.youtube.com/watch?v=RVH05S1qab8
+Goo rerference for understanding channels: https://www.youtube.com/watch?v=j6IOuD5WD8c
+

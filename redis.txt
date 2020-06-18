@@ -1,0 +1,15 @@
+
+Installation and config: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
+
+MAC:
+brew install redis
+
+Launch on start: 
+ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+
+Lauch with configutration file: redis-server /usr/local/etc/redis.conf
+
+uninstall:
+$ brew uninstall redis
+$ rm ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+
