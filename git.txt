@@ -1,5 +1,5 @@
 # Global definitions
-git config --global user.name "Alfred Shaffir"
+git config --global user.name "ashaffir"
 git config --global user.email ashaffir@gmail.com
 
 # Push new repository to Git
