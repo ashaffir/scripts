@@ -6,3 +6,11 @@ sudo du -aBM -d 1 . | sort -nr | head -20
 
 # Nice tool to do similar:
 sudo apt install ncdu
+
+# Ubuntu clean up reference: https://www.fossmint.com/keep-ubuntu-system-clean/
+
+# Clean Ubuntu storage from unnecessary packages
+sudo apt-get autoremove
+
+# Cyber Security:
+# Check for DDoS attacks: https://www.hivelocity.net/kb/how-to-check-if-your-linux-server-is-under-ddos-attack-2/

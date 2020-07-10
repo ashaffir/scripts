@@ -1,3 +1,4 @@
+Reference: https://meterpreter.org/how-to-check-ddos-attack-with-command-line-on-linux/
 reference: https://www.howtogeek.com/513003/how-to-use-netstat-on-linux/
 
 Listing all sockets:

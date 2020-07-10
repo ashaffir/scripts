@@ -74,3 +74,10 @@ Copy what it prints out (or, depending on what you have actually removed from th
 
 psql -U user_name -h 127.0.0.1 database_name
 Paste what you have copied from the SQL queries printout.
+
+Recreate a deleted table with Django Migrations
+1. Delete your migrations folder
+2. In the database: DELETE FROM django_migrations WHERE app = 'app_name'.
+   You could alternatively just truncate this table.
+3. python manage.py makemigrations app_name
+4. python manage.py migrate
