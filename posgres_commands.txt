@@ -45,6 +45,7 @@ psql		start command line
 create database DATABASE;	
 create user USER with encrypted password 'PASSWORD';
 grant all privileges on database DATABASE to USER;
+alter role <USERNAME> superuser;
 
 Run script on the DB:
 psql -U username -d myDataBase -a -f myInsertFile

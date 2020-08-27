@@ -1,5 +1,15 @@
 Installation on Ubuntu 18.04
 
+## When migrating, DO NOT install wordpress when prompt, just load the MySQL DB. ##
+
+backup: 
+mysqldump -p -u root --single-transaction --quick --lock-tables=false shamaut > shamaut.sql
+sudo tar -cpzf shamaut_new.tar.gz /var/www/html
+
+extract:
+sudo tar -C /var/www/html -zxvf shamaut_new.tar.gz
+mysql -u root -p shamaut < shamaut.sql
+
 https://www.hostinger.com/tutorials/how-to-install-wordpress-on-ubuntu-using-lamp-stack/
 
 sudo apt update
