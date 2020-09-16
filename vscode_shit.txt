@@ -1,6 +1,9 @@
 VSCode setup:
 
-Excellent setup: https://www.youtube.com/watch?v=W--_EOzdTHk
+After install, change the icons in the menu with:
+cmd-shift-P, and look for "File icon theme". Change it to Ayu
+
+Excellent python setup: https://www.youtube.com/watch?v=W--_EOzdTHk
 
 Where there are package inport issues:
 1. Go into the workspace folder (here _workspaceRootFolder_) and create a `.env` file
@@ -10,4 +13,8 @@ Where there are package inport issues:
 
 ==========================
 
+How to open vscode through terminal?
+- https://www.codegrepper.com/code-examples/delphi/how+to+open+vscode+through+terminal
 
+Open each file in different tab:
+https://tinyurl.com/y6n6jl4p

@@ -1,4 +1,37 @@
+
+#####################################################
+
 # Reference: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
+
+#####################################################
+
+Install on MAC 
+- https://www.codementor.io/@engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
+brew install postgresql
+
+Start the server:
+pg_ctl -D /usr/local/var/postgres start && brew services start postgresql
+
+postgres -V
+
+psql postgres
+
+- Check users:
+postgres=# \du
+
+CREATE ROLE username WITH LOGIN PASSWORD 'quoted password';
+
+- Set password for postgres account:
+postgres=# \password postgres
+
+postgres=# ALTER ROLE patrick CREATEDB; 
+
+## The above from prompts:
+createuser alfreds
+createuser alfreds --createdb
+CREATE DATABASE databasename;
+psql postgres -U patrick
+...
 
 # Installing on ubuntu
 sudo apt update
