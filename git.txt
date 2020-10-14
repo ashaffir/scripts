@@ -57,10 +57,13 @@ git remote add origin <server>
 e.g.
 git remote add origin https://github.com/elyshaffir/PDF-Converter.git
 
+For a private repository:
+git remote set-url origin https://ashaffir@github.com/Guestmapp/Web.git
+
 List all currently configured remote repositories:	
 git remote -v
 
-Branches
+Branches (https://forum.freecodecamp.org/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222)
 Create a new branch and switch to it:	
 git checkout -b <branchname>
 

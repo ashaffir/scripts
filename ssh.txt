@@ -24,6 +24,8 @@ To log into Ubuntu server without SSH key:
 1) Log as as a root to you Ubuntu server
 	vi /etc/ssh/sshd_config
 1.1) PermitRootLogin no
+1.2) If you want to have password access for others, change to: 
+- PasswordAuthentication yes
 
 2) Change to no to disable tunnelled clear text passwords
 	PasswordAuthentication no
@@ -31,3 +33,6 @@ To log into Ubuntu server without SSH key:
 3) Restart SSH:
 	service sshd reload
 
+Accessing SSH from remote:
+ssh -v user@<IP> 
+will give a a verbose run

@@ -101,3 +101,7 @@ psql dbname < dbname.bak
 
 Add the single column to the DB:
 ALTER TABLE <table> ADD COLUMN <column name> varchar(3);
+
+Delete table:
+drop table <TABLE>;
+
