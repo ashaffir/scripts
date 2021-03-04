@@ -9,6 +9,9 @@ Install on MAC
 - https://www.codementor.io/@engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
 brew install postgresql
 
+Get Info: 
+brew info postgres
+
 Start the server:
 pg_ctl -D /usr/local/var/postgres start && brew services start postgresql
 
@@ -29,16 +32,25 @@ postgres=# ALTER ROLE patrick CREATEDB;
 ## The above from prompts:
 createuser alfreds
 createuser alfreds --createdb
+dropuser USER
+
 CREATE DATABASE databasename;
 psql postgres -U patrick
 ...
 
 # Installing on ubuntu
 sudo apt update
-sudo apt install postgresql postgresql-contrib
+#sudo apt install postgresql postgresql-contrib
+
+sudo apt-get install postgresql
+sudo apt-get install libpq-dev
+
+sudo apt-get install python3-pip
+pip3 install psycopg2
+
 
 # Installing with Django:
-pip install psycopg2
+pip3 install psycopg2
 
 # Accessing DB admin:
 sudo -i -u postgres

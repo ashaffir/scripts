@@ -1,5 +1,6 @@
 
-Installation and config: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
+Installation and config on MAC: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298
+
 
 MAC:
 brew install redis
@@ -12,4 +13,17 @@ Lauch with configutration file: redis-server /usr/local/etc/redis.conf
 uninstall:
 $ brew uninstall redis
 $ rm ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+
+
+ERROR: 
+(error) MISCONF Redis is configured to save RDB snapshots, but i......
+
+Solution:
+brew services restart redis
+
+Install on Ubuntu:
+> https://linuxize.com/post/how-to-install-and-configure-redis-on-ubuntu-20-04/
+
+sudo apt install redis-server
+
 

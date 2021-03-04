@@ -75,8 +75,11 @@ sudo chown -R www-data:www-data /var/www/wordpress
 sudo find /var/www/wordpress/ -type d -exec chmod 750 {} \;
 sudo find /var/www/wordpress/ -type f -exec chmod 640 {} \;
 
-Security measures: https://www.wpbeginner.com/beginners-guide/beginners-step-step-guide-fixing-hacked-wordpress-site/
-Install: Sucuri plugin
+Debug security issues: 
+> https://www.wpbeginner.com/beginners-guide/beginners-step-step-guide-fixing-hacked-wordpress-site/
+
+Security measures (https://www.youtube.com/watch?v=bt3ezVsufPE)
+> Install: Sucuri plugin
 
 Fix to the loading big files issue: https://hostadvice.com/how-to/how-to-edit-php-settings-in-apache-on-an-ubuntu-18-04-vps-or-dedicated-server/
 
@@ -90,3 +93,5 @@ sudo apt-get install php7.2-gd
 sudo systemctl reload apache2
 
 # Theme demo issues: Should import using the internal Wordpress importrer and not the tool with the theme
+
+# Theme issue with count(): https://theme.co/forum/t/warning-count-parameter-must-be-an-array-or-an-object-that-implements-countable-in/43245/2

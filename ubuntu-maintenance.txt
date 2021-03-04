@@ -1,3 +1,6 @@
+# Check Ubuntu version
+lsb_release -a
+
 # Check where are the memory hogs:
 sudo du -cha --max-depth=1 / | grep -E "M|G"
 
@@ -13,4 +16,6 @@ sudo apt install ncdu
 sudo apt-get autoremove
 
 # Cyber Security:
-# Check for DDoS attacks: https://www.hivelocity.net/kb/how-to-check-if-your-linux-server-is-under-ddos-attack-2/
+- Check for DDoS attacks: https://www.hivelocity.net/kb/how-to-check-if-your-linux-server-is-under-ddos-attack-2/
+- sudo apt-get install fail2ban (protect the SSH/22 port)
+

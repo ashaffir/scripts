@@ -1,6 +1,4 @@
-Check this site for client ptions: https://letsencrypt.org/docs/client-options/
 
-This looks like the best solution: 
-https://certbot.eff.org/
+# Reference: https://certbot.eff.org/lets-encrypt/ubuntubionic-apache
 
 
