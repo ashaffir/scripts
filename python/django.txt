@@ -81,3 +81,8 @@ Recreate a deleted table with Django Migrations
    You could alternatively just truncate this table.
 3. python manage.py makemigrations app_name
 4. python manage.py migrate
+
+Check production deployment settings;
+./manage.py check --deploy
+
+

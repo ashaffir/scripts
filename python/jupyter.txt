@@ -1,3 +1,6 @@
+Setup shit: the consol no identifying the modules installed. Run:
+pip3 install ipykernel --upgrade
+python3 -m ipykernel install --user
 
 To show all the rows in a print:
 import pandas as pd

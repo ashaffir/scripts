@@ -91,3 +91,7 @@ sudo chmod -R  775 collected_media/
 
 ### For Django deployment documentation: https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
+Check production deployment settings;
+./manage.py check --deploy
+
+
