@@ -67,3 +67,7 @@ If there are issues with new user change in /etc/passwd:
 
 Stop asking for sudo password:
 https://tinyurl.com/y7hm78fk
+
+Setting up timezone/date:
+https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-20-04/
+

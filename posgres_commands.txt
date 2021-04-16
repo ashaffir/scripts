@@ -105,7 +105,7 @@ Dump backup DB:
 su - <DB USER NAME>
 pg_dump dbname > dbname.bak
 
-Remvove the target DB if exists and create it again:
+Remove the target DB if exists and create it again:
 dropdb dbname
 createdb dbname
 
@@ -117,3 +117,12 @@ ALTER TABLE <table> ADD COLUMN <column name> varchar(3);
 Delete table:
 drop table <TABLE>;
 
+Delete all rows from table:
+delete from <table>;
+
+Export Tables:
+sudo su - postgres
+postgres> pg_dump -d guestmapp -t users* > users.sql
+
+To load the data:
+psql dbname < infile

@@ -20,5 +20,6 @@ sudo chmod -R  g+rwX /var/www
 sudo adduser <user> www-data
 
 # Secure the SSH/22 port
+# https://www.techrepublic.com/article/how-to-install-fail2ban-on-ubuntu-server-18-04/
 sudo apt-get install fail2ban
 sudo systemctl status fail2ban
