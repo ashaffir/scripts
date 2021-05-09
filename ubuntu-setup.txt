@@ -71,3 +71,8 @@ https://tinyurl.com/y7hm78fk
 Setting up timezone/date:
 https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-20-04/
 
+timedatectl list-timezones | grep Jer
+sudo timedatectl set-timezone Asia/Jerusalem
+timedatectl
+
+

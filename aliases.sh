@@ -11,6 +11,7 @@ a j=jobs
 a m=more
 a c=cat
 a l=less
+a b='cd -'
 a mr='more README.md'
 a src='source ~/.bashrc'
 a zrc='source ~/.zshrc'

@@ -22,4 +22,19 @@ sudo adduser <user> www-data
 # Secure the SSH/22 port
 # https://www.techrepublic.com/article/how-to-install-fail2ban-on-ubuntu-server-18-04/
 sudo apt-get install fail2ban
+
+sudo vi /etc/fail2ban/jail.local
+
+# Paste:
+[sshd]
+enabled = true
+port = 22
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+
+sudo systemctl restart fail2ban
+
 sudo systemctl status fail2ban
+
+
