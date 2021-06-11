@@ -12,7 +12,9 @@ git commit -m "first commit"
 git remote add origin https://github.com/ashaffir/<REPOSITORY>.git
 git push -u origin master
 
+# prevent asking for password
 git config --global credential.helper store
+
 
 git checkout -b <BRANCH NAME> # This will open a new branch for the code which the "push" is pointer to
 

@@ -17,3 +17,10 @@ sudo certbot renew --dry-run
 SSL renew:
 sudo certbot renew
 
+SSL Check status:
+sudo certbot certificates
+
+Update to the new CertBot version:
+sudo apt update
+sudo apt install --only-upgrade certbot
+sudo certbot renew

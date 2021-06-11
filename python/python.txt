@@ -33,4 +33,7 @@ cd Python-3.7.6
 sudo make
 sudo make install
 
+    UBUNTU
+==================
+https://www.liquidweb.com/kb/how-to-install-pyenv-on-ubuntu-18-04/
 
